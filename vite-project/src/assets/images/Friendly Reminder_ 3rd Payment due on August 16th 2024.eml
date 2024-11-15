@@ -1,0 +1,170 @@
+Delivered-To: tonny.bett@student.moringaschool.com
+Received: by 2002:a05:6214:2ccf:b0:6b5:f929:98b5 with SMTP id lf15csp1720096qvb;
+        Fri, 2 Aug 2024 07:55:01 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEJxC7qRrweSP0SwWve5Cto/9KKkUkQf812fZsvSmr4WmisvasHSqhSc4iy0gDp9fDaMe4j
+X-Received: by 2002:a05:600c:1d20:b0:426:706c:a55a with SMTP id 5b1f17b1804b1-428e6f7d703mr25092785e9.2.1722610501137;
+        Fri, 02 Aug 2024 07:55:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1722610501; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fjNgCyeEqt1EXmiFLXr6lbHvgWAra5A8X9i0UskcKyHeUNCYxqVKLuDXcnTIKwJ0DQ
+         w0IB4Tdo3W2wp3OcXF1wi4aIdVQV8H0D3iGGspuMQj1WLpvrpry2W37ifFVPsT8W5t71
+         9WeBE5kbVvFImBN03FWv0JDwaZqlEF6Qb7ORt2VWwEbIPCmBEWKcihmIt7JEwBOC9qiK
+         iEYt6hTPkUffUY05JB2/8Es/YUMjW8HyVgQGhF18aXfts2eY/JtU3MK2JEaPvJnOCQOw
+         GAGfgSeti40iuttWgNgAPuJG9vyel7LetDvOVXf8WurqBgTMhQfVc4ou/9EGHPf6xDV2
+         CIgw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:message-id:to:sender:from:date:dkim-signature;
+        bh=NrMywNx9Ktefewr1tXXyTcz61QfNKZdM6va0TJNmEls=;
+        fh=oxp3oiLcU1MJMeWkXBvKw//z3hFbmOE05Ln94OQqCCg=;
+        b=g5yF7heb4o+VBHlEFAtCaZoR8ZsrKvfANLzXGvrpD03aelnyf+5C9Z/bkU2LsLkhC1
+         bRqlZnPFH2Xp73YxNF+TjOD3cAKWB+0/joLjnhmZ45Vzlp9JP9USFvfiR0S6NqdhYBLc
+         WrsMtIs8kZQDzpmlAfznwUhV1gWSu/w0EGewbjfHM+v3bhVOXPbDHlEqLMEZ94LywJ1k
+         OOa5LtYz5jSfcaGtycSfby0/CGS3RYaT4+AaeNMsFST1bCp2bnx15dweADb79O0ggWtT
+         /oJDX3tVB7v8lWrWWqCJ0B4+pR+sQvt3s/G6HFCJw7TXIXl1qY0R1yb6T2Z8IcEWzIEi
+         BbTQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@moringaschool.com header.s=moringa header.b=Q2zWDzE+;
+       spf=pass (google.com: domain of ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com designates 18.169.142.248 as permitted sender) smtp.mailfrom="ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=moringaschool.com
+Return-Path: <ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com>
+Received: from smtp-06053372b1d142def.core1.sfdc-5pakla.mta.salesforce.com (smtp-06053372b1d142def.core1.sfdc-5pakla.mta.salesforce.com. [18.169.142.248])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-36bbd27a4b7si1159457f8f.789.2024.08.02.07.55.00
+        for <tonny.bett@student.moringaschool.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 02 Aug 2024 07:55:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com designates 18.169.142.248 as permitted sender) client-ip=18.169.142.248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@moringaschool.com header.s=moringa header.b=Q2zWDzE+;
+       spf=pass (google.com: domain of ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com designates 18.169.142.248 as permitted sender) smtp.mailfrom="ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=moringaschool.com
+Return-Path: <ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=moringaschool.com;
+	s=moringa; t=1722610500;
+	bh=/hWu0ERuYZFyrkhgrkrIQkL6H6UJp8ceSroMrpLbvhc=;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	b=Q2zWDzE+j6Qr/rA1ImqGKzCR9EUi0k7lzG/cKHh36GiynhxElnFUURKcl7fQVPtfi
+	 Gc6KCccG6g8jRd/80kEuLlzymP2PMWIdm5u8S/xzXvNAU/BsWgdERVkRpAj2qrPwYT
+	 JLU6E7aKRKymXUcYIg/8tQfazUIzf48OTS5imMR8=
+Received: from [127.0.0.1] ([127.0.0.1:46182] helo=eaas-19.eaas.emailinfra.svc.cluster.local)
+	by mx1.core1.sfdc-5pakla.mta.salesforce.com (envelope-from <ar=moringaschool.com__0-22snq1ky9syqpj.rhwjstq17ecg00kd@q6lttdnnxobo1gwo.1uxdlca.4k-2tauquas.gbr64.bnc.salesforce.com>)
+	(ecelerity 4.7.0.20111 r(msys-ecelerity:tags/4.7.0-ga^0)) with ESMTP
+	id A8/6F-00358-443FCA66; Fri, 02 Aug 2024 14:55:00 +0000
+Received: from 127.0.0.1 (localhost. [127.0.0.1]) by eaas-19 (EaaS) id
+  <jWfY8000000000000000000000000000000000000000000000SHLIRN00oN3KQbAkTNCZAqThX20KXg@sfdc.net>
+  for <"tonny.bett@student.moringaschool.com"
+  <tonny.bett@student.moringaschool.com>> Fri, 2 Aug 2024 14:55:00 GMT (GMT)
+Date: Fri, 2 Aug 2024 14:55:00 +0000 (GMT)
+From: Accounts Receivable <ar@moringaschool.com>
+Sender: noreply@salesforce.com
+To: "tonny.bett@student.moringaschool.com"
+ <tonny.bett@student.moringaschool.com>
+Message-ID: <jWfY8000000000000000000000000000000000000000000000SHLIRN00oN3KQbAkTNCZAqThX20KXg@sfdc.net>
+Subject: Re: Friendly Reminder: 3rd Payment due on August 16th 2024
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_13306_413442052.1722610500426"
+X-Priority: 3
+X-SFDC-LK: 00D4K000002TauQ
+X-SFDC-User: 005Q2000000ICnV
+X-Sender: postmaster@salesforce.com
+X-mail_abuse_inquiries: http://www.salesforce.com/company/abuse.jsp
+X-SFDC-TLS-NoRelay: 1
+X-SFDC-Binding: iCBT705cy8bBFz3B
+X-SFDC-App: coreapp
+X-SFDC-EmailCategory: apiMassMail
+X-SFDC-EntityId: 003Q2000009s0Ak
+X-SFDC-Interface: internal
+
+------=_Part_13306_413442052.1722610500426
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_13305_387969858.1722610500426"
+
+------=_Part_13305_387969858.1722610500426
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+Dear Tonny,
+
+We hope that you are doing well and finding the Moringa School academics enjoyable.
+
+We would like to remind you that the third installment is due on August 16th, 2024. Please disregard this message if you have already made payments through the third installment or have paid in full. However, suppose you have not yet settled the third installment or any other outstanding fees. In that case, we kindly request that you do so by the specified deadline to avoid any inconvenience or disruptions to your studies. Timely payment is crucial to maintaining your enrollment status and access to all the resources and opportunities our institution provides.
+
+If your guardian is covering your fees, please share the installment plan for your enrolled program with them to ensure they are aware of the payment amounts and due dates.
+
+If you have any questions or concerns about the payment process or your financial situation, please contact us at ar@moringaschool.com.
+
+We appreciate your ongoing dedication to your education and thank you for your attention to this matter.
+
+Sincerely,
+Accounts Receivable
+Moringa School
+------=_Part_13305_387969858.1722610500426
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+=09<title></title>
+=09<meta content=3D"no-referrer" name=3D"referrer" />
+</head>
+<body data-new-gr-c-s-loaded=3D"14.1190.0">Dear=A0Tonny,<br />
+<br />
+We hope that you are doing well and finding the Moringa School academics en=
+joyable.<br />
+<br />
+We would like to=A0remind=A0you that the=A0third=A0installment=A0is due on=
+=A0<strong>August 16th, 2024. Please disregard this message if you have alr=
+eady made=A0payments=A0through the=A0third=A0installment=A0or have=A0paid=
+=A0in full.</strong>=A0However, suppose you have not yet settled the=A0thir=
+d=A0installment=A0or any other outstanding fees. In that case, we kindly re=
+quest that you do so by the specified deadline to avoid any inconvenience o=
+r disruptions to your studies. Timely=A0payment=A0is crucial to maintaining=
+ your enrollment status and access to all the resources and opportunities o=
+ur institution provides.<br />
+<br />
+If your guardian is covering your fees, please share the=A0installment=A0pl=
+an=A0for your enrolled program with them to ensure they are aware of the=A0=
+payment=A0amounts and due dates.<br />
+<br />
+If you have any questions or concerns about the=A0payment=A0process or your=
+ financial situation, please contact us at=A0<a href=3D"mailto:ar@moringasc=
+hool.com" rel=3D"noreferrer noreferrer noreferrer noreferrer noreferrer" ta=
+rget=3D"_blank">ar@moringaschool.com</a>.<br />
+<br />
+We appreciate your ongoing dedication to your education and thank you for y=
+our attention to this matter.<br />
+<br />
+Sincerely,<br />
+Accounts Receivable<br />
+Moringa School<img data-bit=3D"iit" src=3D"https://ci3.googleusercontent.co=
+m/meips/ADKq_NYYNaiJxEpHfNns6KaSpIG0SMMcDPaZy76SsdvTuyQA8iFHsD-yhe-s2a2tiRj=
+_MEiZaGtkVI9QtLZ2sxlsLNfXfDCeLIDg0P7xl76lfKone-O151XVZ_qZNPKcwadu5eIwesR2G-=
+K7ktj_8_ORbaFe7_cr_1v_-Hak2naeUu9T3Iz3ZGA=3Ds0-d-e1-ft#https://moringa.my.s=
+alesforce.com/servlet/servlet.ImageServer?oid=3D00D4K000002TauQ&esid=3D018Q=
+20000095R6E&from=3Dext" style=3D"max-width: 798px;" /><img data-bit=3D"iit"=
+ src=3D"https://ci3.googleusercontent.com/meips/ADKq_NZGDXmOmjDhAtgINQ8goXn=
+t0DkLL8FPluvFB5iKZhxqqwwqmK6J12ND-jPhMjcd5Nztumt3lfYnYf-RxXRaF7X2aTqTbcJWLg=
+-NHlS-uwW7XwkcdmmfkMCTfL0fqt2G1uCY2WS7umI_BmNy4ff2oXny0nw3aVuUKqIKXLE_xSz4_=
+spnqMQ=3Ds0-d-e1-ft#https://moringa.my.salesforce.com/servlet/servlet.Image=
+Server?oid=3D00D4K000002TauQ&esid=3D018Q200000AcRxt&from=3Dext" style=3D"ma=
+x-width: 798px;" /><img data-bit=3D"iit" src=3D"https://ci3.googleuserconte=
+nt.com/meips/ADKq_NYObgDf5K7X2VFtBZfVCRTEQsY9THXt467RxeezHY7c-txSPYkwWRcD7g=
+Nko7LYhrtNzrNtqbpIaLnxOrJT9UnkBdgduHLU2Rl4d8ORR7Mb-SFkgPdtB09-w6V8283oa-Bjy=
+1TxQsfi0Zt53swVwRaM06qg5UXBzvzd8_CzkNgcCBXxVbM=3Ds0-d-e1-ft#https://moringa=
+.my.salesforce.com/servlet/servlet.ImageServer?oid=3D00D4K000002TauQ&esid=
+=3D018Q200000B9yK8&from=3Dext" style=3D"max-width: 798px;" /></body>
+<grammarly-desktop-integration data-grammarly-shadow-root=3D"true"></gramma=
+rly-desktop-integration></html><img src=3D"https://moringa.my.salesforce.co=
+m/servlet/servlet.ImageServer?oid=3D00D4K000002TauQ&esid=3D018Q200000BnmIt&=
+from=3Dext">
+------=_Part_13305_387969858.1722610500426--
+
+------=_Part_13306_413442052.1722610500426
+Content-Type: text/html; charset=ISO-8859-1; name="Financing Moringa Software Engineering FI ( Hybrid Installment Plan)- SDF-FT 10- June 3rd 2024Class_docx_pdf.html"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="Financing Moringa Software Engineering FI ( Hybrid Installment Plan)- SDF-FT 10- June 3rd 2024Class_docx_pdf.html"
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><meta http-equiv="Refresh" content="0; URL=https://moringa.my.salesforce.com/sfc/p/4K000002TauQ/a/Q2000003R2K9/22tOyoKYKUM8VcJQZFds7raJdfzBZ8ztXWr3IklCqVQ"></head><body><div>Attachment not opening? Click this link: <a href="https://moringa.my.salesforce.com/sfc/p/4K000002TauQ/a/Q2000003R2K9/22tOyoKYKUM8VcJQZFds7raJdfzBZ8ztXWr3IklCqVQ">Financing Moringa Software Engineering FI ( Hybrid Installment Plan)- SDF-FT 10- June 3rd 2024Class.docx.pdf</a></div></html>
+------=_Part_13306_413442052.1722610500426--
