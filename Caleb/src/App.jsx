@@ -5,6 +5,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactForm from './components/ContactForm';
 import PortfolioGrid from './components/PortfolioGrid';
+import Advertisement from './components/Advertisement';
 
 const App = () => (
   <Router>
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/contact" element={<ContactForm />} />
       <Route path="/portfolio-grid" element={<PortfolioGrid />} />
+      <Route path="/advertisement" element={<Advertisement />} />
     </Routes>
   </Router>
 );
